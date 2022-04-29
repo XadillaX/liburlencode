@@ -16,8 +16,8 @@ int main(int argc, const char** argv) {
   char output4[input_size + 1];
   urlencode::Encode(input, input_size, output1, true);
   urlencode::Encode(input, input_size, output2, false);
-  urlencode::Decode(output1, strlen(output1), output3);
-  urlencode::Decode(output2, strlen(output2), output4);
+  urlencode::Decode(output1, strlen(output1), output3, true);
+  urlencode::Decode(output2, strlen(output2), output4, false);
 
   printf("Encoded (space to plus): %s\n", output1);
   printf("Decoded: %s\n\n", output3);

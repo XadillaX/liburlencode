@@ -33,7 +33,7 @@ The example executable binary will be at `out/$(BUILDTYPE)/example`.
 
 ```cpp
 size_t Encode(const char* src, const size_t len, char* dst, bool space_to_plus);
-size_t Decode(const char* src, const size_t len, char* dst);
+size_t Decode(const char* src, const size_t len, char* dst, bool plus_to_space);
 ```
 
 **If you're encoding, make sure that the `dst`'s total length be 3 times as `src`'s.** You may refers to `example/main.cc`.

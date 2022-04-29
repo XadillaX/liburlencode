@@ -2,6 +2,7 @@
 #define INCLUDE_URLENCODE_H_
 
 #include <stdlib.h>
+#include "urlencode_version.h"
 
 namespace urlencode {
 namespace table_data {
@@ -10,7 +11,7 @@ extern const unsigned char hexval[256];
 }  // namespace table_data
 
 size_t Encode(const char* src, const size_t len, char* dst, bool space_to_plus);
-size_t Decode(const char* src, const size_t len, char* dst);
+size_t Decode(const char* src, const size_t len, char* dst, bool plus_to_space);
 
 }  // namespace urlencode
 

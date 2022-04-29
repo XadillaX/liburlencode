@@ -33,14 +33,17 @@ size_t Encode(const char* src,
   return cur;
 }
 
-size_t Decode(const char* src, const size_t len, char* dst) {
+size_t Decode(const char* src,
+              const size_t len,
+              char* dst,
+              bool plus_to_space) {
   size_t i = 0;
   size_t j = 0;
 
   while (i < len) {
     int copy_char = 1;
 
-    if (src[i] == '+') {
+    if (src[i] == '+' && plus_to_space) {
       dst[j] = ' ';
       i++;
       j++;
